@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ulang Tahun Marco Baihaqi Zidane</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #0f0f0f 0%, #2c1810 50%, #1a1a2e 100%);
+            color: #f4f4f4;
+            text-align: center;
+            padding: 40px;
+            margin: 0;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4em;
+            color: #ffd700; /* Emas */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .age {
+            font-size: 1.8em;
+            color: #e0e0e0;
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+        img {
+            max-width: 400px;
+            width: 100%;
+            border-radius: 15px;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+            border: 5px solid #ffd700;
+        }
+        .audio-container {
+            margin: 30px 0;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+        audio {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            background: linear-gradient(45deg, #2c1810, #1a1a2e);
+            outline: none;
+        }
+        audio::-webkit-media-controls-panel {
+            background: linear-gradient(45deg, #2c1810, #1a1a2e);
+            border-radius: 10px;
+        }
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            color: #ffd700;
+            margin: 40px 0 20px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+        .message-form {
+            margin: 30px auto;
+            max-width: 500px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        input, textarea {
+            display: block;
+            width: 100%;
+            margin: 15px 0;
+            padding: 15px;
+            border: 2px solid #ffd700;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #f4f4f4;
+            font-size: 1em;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+        input::placeholder, textarea::placeholder {
+            color: #ccc;
+        }
+        input:focus, textarea:focus {
+            border-color: #ffed4e;
+        }
+        button {
+            display: block;
+            width: 100%;
+            margin: 20px 0;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            color: #1a1a2e;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+        }
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.5);
+        }
+        .messages {
+            max-width: 700px;
+            margin: 40px auto;
+            text-align: left;
+        }
+        .message {
+            background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            border: 1px solid #ffd700;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            color: #f4f4f4;
+        }
+        .message strong {
+            color: #ffd700;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3em;
+            }
+            h2 {
+                font-size: 2em;
+            }
+            img {
+                max-width: 300px;
+            }
+            .message-form {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Selamat Ulang Tahun, Marco Baihaqi Zidane!</h1>
+    <p class="age">Umur: 14 tahun</p>
+    <img src="birthday-image.jpg" alt="Foto Ulang Tahun Marco">
+    
+    <!-- Elemen audio untuk lagu dengan kontrol yang diperbaiki dan elegan -->
+    <div class="audio-container">
+        <h2>Lagu Ulang Tahun</h2>
+        <audio controls autoplay loop>
+            <source src="akaza-theme.mp3" type="audio/mpeg"> <!-- Ganti dengan URL lagu ulang tahunmu, misalnya MP3 dari freesound.org -->
+            Browser kamu tidak mendukung elemen audio.
+        </audio>
+    </div>
+    
+    <h2>Kirim Pesan Ucapan</h2>
+    <form class="message-form" id="messageForm">
+        <input type="text" id="name" placeholder="Nama kamu" required>
+        <textarea id="message" placeholder="Pesan ucapan ulang tahun..." required></textarea>
+        <button type="submit">Kirim Pesan</button>
+    </form>
+    
+    <h2>Pesan Ucapan</h2>
+    <div class="messages" id="messagesList"></div>
+    
+    <script>
+        // Fungsi untuk menyimpan dan menampilkan pesan menggunakan localStorage
+        const messageForm = document.getElementById('messageForm');
+        const messagesList = document.getElementById('messagesList');
+        
+        // Load pesan dari localStorage saat halaman dimuat
+        function loadMessages() {
+            const messages = JSON.parse(localStorage.getItem('birthdayMessages')) || [];
+            messagesList.innerHTML = '';
+            messages.forEach(msg => {
+                const div = document.createElement('div');
+                div.className = 'message';
+                div.innerHTML = `<strong>${msg.name}:</strong> ${msg.message}`;
+                messagesList.appendChild(div);
+            });
+        }
+        
+        // Simpan pesan baru
+        messageForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const message = document.getElementById('message').value;
+            const messages = JSON.parse(localStorage.getItem('birthdayMessages')) || [];
+            messages.push({ name, message });
+            localStorage.setItem('birthdayMessages', JSON.stringify(messages));
+            loadMessages();
+            messageForm.reset();
+        });
+        
+        // Load pesan saat halaman dimuat
+        loadMessages();
+    </script>
+</body>
+</html>
